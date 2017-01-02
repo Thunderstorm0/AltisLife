@@ -132,6 +132,7 @@ class Life_Client_Core {
         class ticketPrompt {};
         class vehInvSearch {};
         class wantedGrab {};
+        class captureReward {};
     };
 
     class Dialog_Controls {
@@ -208,6 +209,8 @@ class Life_Client_Core {
         class tazeSound {};
         class teleport {};
         class whereAmI {};
+        class PVPZone {};
+        class dropg {};
     };
 
     class Gangs {

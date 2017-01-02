@@ -105,6 +105,9 @@ class CfgFunctions {
         class Actions {
             file = "\life_server\Functions\Actions";
             class pickupAction {};
+            class FillDaBox {};
+            class ExplodeBox {};
+            class CapturedUN {};
         };
 
         class PlayTime {

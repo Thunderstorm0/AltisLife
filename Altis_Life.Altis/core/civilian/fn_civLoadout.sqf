@@ -11,7 +11,10 @@ waitUntil {scriptDone _handle};
 
 _clothings = ["U_C_Poloshirt_blue","U_C_Poloshirt_burgundy","U_C_Poloshirt_stripped","U_C_Poloshirt_tricolour","U_C_Poloshirt_salmon","U_C_Poloshirt_redwhite","U_C_Commoner1_1"];
 player addUniform (selectRandom _clothings);
-
+player AddWeapon "hlc_rifle_bcmjack";
+player addMagazine "hlc_30rnd_556x45_EPR";
+player addMagazine "hlc_30rnd_556x45_EPR";
+player addMagazine "hlc_30rnd_556x45_EPR";
 /* ITEMS */
 player linkItem "ItemMap";
 player linkItem "ItemCompass";

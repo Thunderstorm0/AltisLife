@@ -25,6 +25,21 @@ if ((typeOf _container) in ["Box_IND_Grenades_F","B_supplyCrate_F"]) exitWith {
     };
 };
 
+if (((typeOf _container) == "Box_IND_AmmoVeh_F") && _container getVariable ["AirPenis",true] && (playerSide) == independent) exitWith {
+    true;
+};
+
+if (((typeOf _container) == "Box_IND_AmmoVeh_F") && _container getVariable ["AirPenis",true] && (playerSide) == west) exitWith {
+    hintSilent "Scroll to Capture the Crate";
+    true;
+};
+
+if (((typeOf _container) == "Box_IND_AmmoVeh_F") && _container getVariable ["AirPenis",true]) exitWith {
+    [[1,2],"A PLAYER HAS TRIGGERED THE FAIL SAFE ON THE AIR DROP",true,[]] remoteExecCall ["life_fnc_broadcast",west];
+    [[1,2],"A PLAYER HAS TRIGGERED THE FAIL SAFE ON THE AIR DROP",true,[]] remoteExecCall ["life_fnc_broadcast",civilian];
+    [_container,"Civ"] execVM "core\functions\fn_Crate.sqf";
+};
+
 _list = ["LandVehicle","Ship","Air"];
 if (KINDOF_ARRAY(_container,_list)) exitWith {
     if (!(_container in life_vehicles) && {locked _container isEqualTo 2}) exitWith {
